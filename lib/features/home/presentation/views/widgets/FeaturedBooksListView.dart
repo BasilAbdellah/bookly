@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/widgets/CustomListView.dart';
+import 'package:bookly/features/home/presentation/views/widgets/CustomBookImage.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -13,7 +13,7 @@ class FeaturedBooksListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding:  EdgeInsets.symmetric(horizontal: 8.0),
-            child: CustomListViewItem(),
+            child: CustomBookImage(),
           );
         },),
     );
