@@ -1,5 +1,5 @@
 /// text : false
-/// image : true
+/// image : false
 
 class ReadingModes {
   ReadingModes({

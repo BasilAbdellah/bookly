@@ -1,5 +1,5 @@
 /// type : "ISBN_13"
-/// identifier : "9781284175554"
+/// identifier : "9780743477741"
 
 class IndustryIdentifiers {
   IndustryIdentifiers({

@@ -5,10 +5,10 @@ import 'Pdf.dart';
 /// viewability : "PARTIAL"
 /// embeddable : true
 /// publicDomain : false
-/// textToSpeechPermission : "ALLOWED"
+/// textToSpeechPermission : "ALLOWED_FOR_ACCESSIBILITY"
 /// epub : {"isAvailable":false}
-/// pdf : {"isAvailable":true,"acsTokenLink":"http://books.google.com.eg/books/download/Python_Programming_in_Context-sample-pdf.acsm?id=b-2oDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"}
-/// webReaderLink : "http://play.google.com/books/reader?id=b-2oDwAAQBAJ&hl=&source=gbs_api"
+/// pdf : {"isAvailable":false}
+/// webReaderLink : "http://play.google.com/books/reader?id=RQwJ5AGCCXUC&hl=&source=gbs_api"
 /// accessViewStatus : "SAMPLE"
 /// quoteSharingAllowed : false
 

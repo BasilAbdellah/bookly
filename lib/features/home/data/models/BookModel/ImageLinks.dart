@@ -1,5 +1,5 @@
-/// smallThumbnail : "http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-/// thumbnail : "http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+/// smallThumbnail : "http://books.google.com/books/content?id=RQwJ5AGCCXUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+/// thumbnail : "http://books.google.com/books/content?id=RQwJ5AGCCXUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
 
 class ImageLinks {
   ImageLinks({

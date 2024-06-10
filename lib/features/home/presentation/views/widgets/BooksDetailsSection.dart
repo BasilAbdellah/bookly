@@ -1,16 +1,16 @@
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/features/home/data/models/BookModel/Items.dart';
 import 'package:bookly/features/home/presentation/views/widgets/BookAction.dart';
-import 'package:bookly/features/home/presentation/views/widgets/BookRating.dart';
 import 'package:bookly/features/home/presentation/views/widgets/CustomBookImage.dart';
 import 'package:flutter/material.dart';
 
 class BooksDetailsSection extends StatelessWidget {
-  const BooksDetailsSection({super.key});
+  const BooksDetailsSection({super.key, required this.items});
+  final Items items;
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-
     return Column(
       children: [
         Padding(
@@ -38,9 +38,10 @@ class BooksDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 18,
         ),
-        const BookRating(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
+        //  BookRating(
+        //    rating: items.volumeInfo!.maturityRating! ,
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        // ),
         const SizedBox(
           height: 37,
         ),

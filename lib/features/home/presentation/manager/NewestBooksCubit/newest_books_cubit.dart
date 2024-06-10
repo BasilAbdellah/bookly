@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookly/features/home/data/models/BookModel/BookModel.dart';
 import 'package:bookly/features/home/data/models/BookModel/Items.dart';
 import 'package:bookly/features/home/data/repos/HomeRepo.dart';
 import 'package:meta/meta.dart';
@@ -10,7 +9,7 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
   NewestBooksCubit(this.homeRepo) : super(NewestBooksInitial());
   final HomeRepo homeRepo;
 
-  Future<void> NewestBooks() async{
+  Future<void> fetchNewestBooks() async{
     emit(NewestBooksLoading());
     var result = await homeRepo.fetchNewestBooks();
 

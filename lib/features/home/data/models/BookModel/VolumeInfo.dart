@@ -3,25 +3,27 @@ import 'ReadingModes.dart';
 import 'PanelizationSummary.dart';
 import 'ImageLinks.dart';
 
-/// title : "Python Programming in Context"
-/// authors : ["Bradley N. Miller","David L. Ranum","Julie Anderson"]
-/// publisher : "Jones & Bartlett Learning"
-/// publishedDate : "2019-10-01"
-/// description : "Python Programming in Context, Third Edition provides a comprehensive and accessible introduction to Python fundamentals. Updated with the latest version of Python, the new Third Edition offers a thorough overview of multiple applied areas, including image processing, cryptography, astronomy, the Internet, and bioinformatics. Taking an active learning approach, each chapter starts with a comprehensive real-world project that teaches core design techniques and Python programming while engaging students. An ideal first language for learners entering the rapidly expanding field of computer science, Python gives students a solid platform of key problem-solving skills that translate easily across programming languages."
-/// industryIdentifiers : [{"type":"ISBN_13","identifier":"9781284175554"},{"type":"ISBN_10","identifier":"1284175553"}]
-/// readingModes : {"text":false,"image":true}
-/// pageCount : 516
+/// title : "The Joy of Sex"
+/// authors : ["Alex Comfort"]
+/// publisher : "Simon and Schuster"
+/// publishedDate : "2003"
+/// description : "A thirtieth anniversary edition of the guide first published in 1972 features updated text and illustrations and covers such topics as sexually transmitted diseases and achieving healthy intimacy."
+/// industryIdentifiers : [{"type":"ISBN_13","identifier":"9780743477741"},{"type":"ISBN_10","identifier":"074347774X"}]
+/// readingModes : {"text":false,"image":false}
+/// pageCount : 243
 /// printType : "BOOK"
-/// categories : ["Computers"]
-/// maturityRating : "NOT_MATURE"
+/// categories : ["Family & Relationships"]
+/// averageRating : 4
+/// ratingsCount : 1
+/// maturityRating : "MATURE"
 /// allowAnonLogging : false
-/// contentVersion : "0.1.1.0.preview.1"
+/// contentVersion : "0.3.2.0.preview.0"
 /// panelizationSummary : {"containsEpubBubbles":false,"containsImageBubbles":false}
-/// imageLinks : {"smallThumbnail":"http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","thumbnail":"http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}
+/// imageLinks : {"smallThumbnail":"http://books.google.com/books/content?id=RQwJ5AGCCXUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","thumbnail":"http://books.google.com/books/content?id=RQwJ5AGCCXUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"}
 /// language : "en"
-/// previewLink : "http://books.google.com.eg/books?id=b-2oDwAAQBAJ&printsec=frontcover&dq=programming&hl=&cd=1&source=gbs_api"
-/// infoLink : "http://books.google.com.eg/books?id=b-2oDwAAQBAJ&dq=programming&hl=&source=gbs_api"
-/// canonicalVolumeLink : "https://books.google.com/books/about/Python_Programming_in_Context.html?hl=&id=b-2oDwAAQBAJ"
+/// previewLink : "http://books.google.com.eg/books?id=RQwJ5AGCCXUC&printsec=frontcover&dq=subject:sex&hl=&cd=1&source=gbs_api"
+/// infoLink : "http://books.google.com.eg/books?id=RQwJ5AGCCXUC&dq=subject:sex&hl=&source=gbs_api"
+/// canonicalVolumeLink : "https://books.google.com/books/about/The_Joy_of_Sex.html?hl=&id=RQwJ5AGCCXUC"
 
 class VolumeInfo {
   VolumeInfo({
@@ -35,6 +37,8 @@ class VolumeInfo {
       this.pageCount, 
       this.printType, 
       this.categories, 
+      this.averageRating, 
+      this.ratingsCount, 
       this.maturityRating, 
       this.allowAnonLogging, 
       this.contentVersion, 
@@ -61,6 +65,8 @@ class VolumeInfo {
     pageCount = json['pageCount'];
     printType = json['printType'];
     categories = json['categories'] != null ? json['categories'].cast<String>() : [];
+    averageRating = json['averageRating'];
+    ratingsCount = json['ratingsCount'];
     maturityRating = json['maturityRating'];
     allowAnonLogging = json['allowAnonLogging'];
     contentVersion = json['contentVersion'];
@@ -81,6 +87,8 @@ class VolumeInfo {
   int? pageCount;
   String? printType;
   List<String>? categories;
+  int? averageRating;
+  int? ratingsCount;
   String? maturityRating;
   bool? allowAnonLogging;
   String? contentVersion;
@@ -100,6 +108,8 @@ VolumeInfo copyWith({  String? title,
   int? pageCount,
   String? printType,
   List<String>? categories,
+  int? averageRating,
+  int? ratingsCount,
   String? maturityRating,
   bool? allowAnonLogging,
   String? contentVersion,
@@ -119,6 +129,8 @@ VolumeInfo copyWith({  String? title,
   pageCount: pageCount ?? this.pageCount,
   printType: printType ?? this.printType,
   categories: categories ?? this.categories,
+  averageRating: averageRating ?? this.averageRating,
+  ratingsCount: ratingsCount ?? this.ratingsCount,
   maturityRating: maturityRating ?? this.maturityRating,
   allowAnonLogging: allowAnonLogging ?? this.allowAnonLogging,
   contentVersion: contentVersion ?? this.contentVersion,
@@ -145,6 +157,8 @@ VolumeInfo copyWith({  String? title,
     map['pageCount'] = pageCount;
     map['printType'] = printType;
     map['categories'] = categories;
+    map['averageRating'] = averageRating;
+    map['ratingsCount'] = ratingsCount;
     map['maturityRating'] = maturityRating;
     map['allowAnonLogging'] = allowAnonLogging;
     map['contentVersion'] = contentVersion;
