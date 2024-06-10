@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly/features/home/data/models/BookModel/BookModel.dart';
+import 'package:bookly/features/home/data/models/BookModel/Items.dart';
 import 'package:bookly/features/home/data/repos/HomeRepo.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 part 'featured_books_state.dart';
 
@@ -16,7 +16,7 @@ class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
     result.fold((failure){
       emit(FeaturedBooksFailure(failure.errMessage));
     }, (books){
-      emit(FeaturedBooksSuccess(books));
+      emit(FeaturedBooksSuccess(books.cast<Items>()));
     });
 
 

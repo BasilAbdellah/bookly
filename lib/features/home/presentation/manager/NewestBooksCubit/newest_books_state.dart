@@ -10,6 +10,6 @@ final class NewestBooksFailure extends NewestBooksState {
   NewestBooksFailure(this.errMessage);
 }
 final class NewestBooksSuccess extends NewestBooksState {
-  final List<BookModel> books;
+  final List<Items> books;
   NewestBooksSuccess(this.books);
 }

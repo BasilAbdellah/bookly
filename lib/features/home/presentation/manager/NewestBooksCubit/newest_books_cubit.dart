@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly/features/home/data/models/BookModel/BookModel.dart';
+import 'package:bookly/features/home/data/models/BookModel/Items.dart';
 import 'package:bookly/features/home/data/repos/HomeRepo.dart';
 import 'package:meta/meta.dart';
 
@@ -16,7 +17,7 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
     result.fold((failure){
        emit(NewestBooksFailure(failure.errMessage));
     }, (books){
-      emit(NewestBooksSuccess(books));
+      emit(NewestBooksSuccess(books.cast<Items>()));
     });
   }
 }
