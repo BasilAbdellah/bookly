@@ -5,33 +5,32 @@ import 'package:bookly/features/home/presentation/views/widgets/FeaturedBooksLis
 import 'package:flutter/material.dart';
 
 class Homescreenbody extends StatelessWidget {
-  const Homescreenbody({super.key});
-
+  const Homescreenbody({super.key,});
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return  const CustomScrollView(
       physics:  BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30.0),
                 child: CustomAppBar(),
               ),
               FeaturedBooksListView(),
-              SizedBox(
+               SizedBox(
                 height: 16,
               ),
-              Padding(
+               Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
                   "Newest Books",
                   style: styles.textStyle18,
                 ),
               ),
-              SizedBox(
+               SizedBox(
                 height: 20,
               ),
             ],

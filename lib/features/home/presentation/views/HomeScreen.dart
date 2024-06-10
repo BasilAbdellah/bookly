@@ -2,7 +2,7 @@ import 'package:bookly/features/home/presentation/views/widgets/HomeScreenBody.d
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, });
 
   @override
   Widget build(BuildContext context) {
