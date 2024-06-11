@@ -12,7 +12,23 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<Items>>> fetchNewestBooks() async {
     try {
       var data = await apiService.get(
-          endPoint: "volumes?q=subject:history&Filtering=free-ebooks");
+          endPoint: "volumes?q=subject:history&Filtering=free-ebooks&Sorting=newest");
+      List<Items> books = [];
+      for (var item in data['items']) {
+        books.add(Items.fromJson(item));
+      }
+      return right(books);
+    } catch (e) {
+      if (e is DioError) {
+        return left(ServerFailure.fromDioError(e));
+      }
+      return left(ServerFailure(e.toString()));
+    }
+  }
+  Future<Either<Failure, List<Items>>> fetchSearchedBooks({required String Search}) async {
+    try {
+      var data = await apiService.get(
+          endPoint: "volumes?q=subject:${Search}&Filtering=free-ebooks");
       List<Items> books = [];
       for (var item in data['items']) {
         books.add(Items.fromJson(item));
